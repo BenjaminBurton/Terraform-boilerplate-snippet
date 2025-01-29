@@ -95,6 +95,8 @@ resource "aws_subnet" "subnet_b" {
 
 ## 🛠 VSCode Terraform Snippet (terraform.json)
 
+This json file is for your snippets, you can autocomplete when typing in the first letters of terraform-boilerplate just by choosing from the dropdown. This is to give you a starting point, and you can adjust as you see fit. This is a very basic setup, but you can also go with a simple network topology from the example shown in terraform docs [HERE](https://developer.hashicorp.com/terraform/language) the example is also in the variables.tf file for your convenience.
+
 ```bash
 {
   "Terraform Boilerplate": {
