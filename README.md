@@ -60,7 +60,7 @@ terraform apply
 terraform output
 ```
 
-## 📜 Terraform Configuration (main.tf)
+## 📜 Terraform Configuration (main.tf) Basic
 
 ```bash
 terraform {
@@ -95,7 +95,7 @@ resource "aws_subnet" "subnet_b" {
 
 ## 🛠 VSCode Terraform Snippet (terraform.json)
 
-The json file is for your snippets, but if you want to use a simple network topology from the example shown in terraform docs [HERE](https://developer.hashicorp.com/terraform/language) then you can find the example in the variables.tf file for your convenience.
+The json file is for your snippets, but if you want to use a simple network topology from the example shown in the terraform docs [HERE](https://developer.hashicorp.com/terraform/language) then you can find that example in the variables.tf file for your convenience.
 
 ## 🛑 Cleanup
 
