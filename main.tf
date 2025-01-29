@@ -7,34 +7,22 @@ terraform {
   }
 }
 
-variable "aws_region" {}
-
-variable "base_cidr_block" {
-  description = "A /16 CIDR range definition, such as 10.1.0.0/16, that the VPC will use"
-  default = "10.1.0.0/16"
-}
-
-variable "availability_zones" {
-  description = "A list of availability zones in which to create subnets"
-  type = list(string)
-}
-
 provider "aws" {
-  region = var.aws_region
+  region = "us-east-1"
 }
 
 resource "aws_vpc" "main" {
-  cidr_block = var.base_cidr_block
+  cidr_block = "10.1.0.0/16"
 }
 
-resource "aws_subnet" "az" {
-  count = length(var.availability_zones)
-  availability_zone = var.availability_zones[count.index]
-  vpc_id = aws_vpc.main.id
-  cidr_block = cidrsubnet(aws_vpc.main.cidr_block, 4, count.index+1)
+resource "aws_subnet" "subnet_a" {
+  availability_zone = "us-east-1a"
+  vpc_id           = aws_vpc.main.id
+  cidr_block       = "10.1.1.0/24"
 }
 
-output "vpc_id" {
-  description = "The ID of the created VPC"
-  value = aws_vpc.main.id
+resource "aws_subnet" "subnet_b" {
+  availability_zone = "us-east-1b"
+  vpc_id           = aws_vpc.main.id
+  cidr_block       = "10.1.2.0/24"
 }
