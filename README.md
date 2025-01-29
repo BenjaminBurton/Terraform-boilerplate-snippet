@@ -16,10 +16,10 @@ This Terraform configuration sets up a VPC (Virtual Private Cloud) and subnets i
 
 ## 🚀 Features
 
-✅ Creates an AWS VPC with a custom CIDR block
-✅ Deploys multiple subnets in different Availability Zones
-✅ Pre-configured Terraform snippet for quick usage in VSCode
-✅ Supports manual region selection without using variables
+- ✅ Creates an AWS VPC with a custom CIDR block
+- ✅ Deploys multiple subnets in different Availability Zones
+- ✅ Pre-configured Terraform snippet for quick usage in VSCode
+- ✅ Supports manual region selection without using variables
 
 ## 🔧 Prerequisites
 
