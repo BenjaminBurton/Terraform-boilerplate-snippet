@@ -95,46 +95,7 @@ resource "aws_subnet" "subnet_b" {
 
 ## 🛠 VSCode Terraform Snippet (terraform.json)
 
-This json file is for your snippets, you can autocomplete when typing in the first letters of terraform-boilerplate just by choosing from the dropdown. This is to give you a starting point, and you can adjust as you see fit. This is a very basic setup, but you can also go with a simple network topology from the example shown in terraform docs [HERE](https://developer.hashicorp.com/terraform/language) the example is also in the variables.tf file for your convenience.
-
-```bash
-{
-  "Terraform Boilerplate": {
-    "prefix": "terraform-boilerplate",
-    "body": [
-      "terraform {",
-      "  required_providers {",
-      "    aws = {",
-      "      source  = \"hashicorp/aws\"",
-      "      version = \"~> 1.0.4\"",
-      "    }",
-      "  }",
-      "}",
-      "",
-      "provider \"aws\" {",
-      "  region = \"us-east-1\"",
-      "}",
-      "",
-      "resource \"aws_vpc\" \"main\" {",
-      "  cidr_block = \"10.1.0.0/16\"",
-      "}",
-      "",
-      "resource \"aws_subnet\" \"subnet_a\" {",
-      "  availability_zone = \"us-east-1a\"",
-      "  vpc_id           = aws_vpc.main.id",
-      "  cidr_block       = \"10.1.1.0/24\"",
-      "}",
-      "",
-      "resource \"aws_subnet\" \"subnet_b\" {",
-      "  availability_zone = \"us-east-1b\"",
-      "  vpc_id           = aws_vpc.main.id",
-      "  cidr_block       = \"10.1.2.0/24\"",
-      "}"
-    ],
-    "description": "Boilerplate for Terraform with AWS provider, VPC, and subnets."
-  }
-}
-```
+The json file is for your snippets, but if you want to use a simple network topology from the example shown in terraform docs [HERE](https://developer.hashicorp.com/terraform/language) then you can find the example in the variables.tf file for your convenience.
 
 ## 🛑 Cleanup
 
